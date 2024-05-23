@@ -11,12 +11,12 @@ This is a simplified version of a task management web application built using Sc
 
 
 ## API Endpoints
-1. **POST** /users: Create a new user.
-2. **POST** /users/{userId}/tasks: Create a new task for the specified user.
-3. **GET** /users/{userId}/tasks: Retrieve all tasks for the specified user.
-4. **GET** /users/{userId}/tasks/{taskId}: Retrieve a specific task for the specified user.
-5. **PUT** /users/{userId}/tasks/{taskId}: Update a specific task for the specified user.
-6. **DELETE** /users/{userId}/tasks/{taskId}: Delete a specific task for the specified user.
+- **POST** /users: Create a new user.
+- **POST** /users/{userId}/tasks: Create a new task for the specified user.
+- **GET** /users/{userId}/tasks: Retrieve all tasks for the specified user.
+- **GET** /users/{userId}/tasks/{taskId}: Retrieve a specific task for the specified user.
+- **PUT** /users/{userId}/tasks/{taskId}: Update a specific task for the specified user.
+- **DELETE** /users/{userId}/tasks/{taskId}: Delete a specific task for the specified user.
 
 ## Table Design
 ### User
@@ -42,11 +42,11 @@ FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 
 ## Design Decisions
 
-1. **Functional Programming**: The application leverages Scala's functional programming features to enhance code maintainability and reliability. This includes the use of immutable data structures and pure functions.
+- **Functional Programming**: The application leverages Scala's functional programming features to enhance code maintainability and reliability. This includes the use of immutable data structures and pure functions.
 
-2. **Asynchronous Processing**: Using Play Framework’s asynchronous processing capabilities ensures the application can handle multiple requests concurrently without blocking.
+- **Asynchronous Processing**: Using Play Framework’s asynchronous processing capabilities ensures the application can handle multiple requests concurrently without blocking.
 
-3. **Error Handling**: Robust error handling is implemented throughout the application to provide meaningful error messages and ensure smooth operation.
+- **Error Handling**: Robust error handling is implemented throughout the application to provide meaningful error messages and ensure smooth operation.
 
 ## Setup and Usage
 ### Prerequisites
@@ -55,8 +55,8 @@ FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 `SBT (Scala Build Tool)`
 
 ### Dependencies
-`Guice` 
-`Play Slick` 
-`Play Slick Evolutions `
-`ScalaTestPlus Play `
-`MySQL Connector `
+- **Guice**: For dependency injection.
+- **Play Slick**: For integrating Slick with Play Framework.
+- **Play Slick Evolutions**: For managing database schema evolutions.
+- **ScalaTestPlus Play**: For testing Play applications using ScalaTest.
+- **MySQL Connector/J**: For connecting to MySQL databases.
