@@ -11,9 +11,9 @@ CREATE TABLE tasks (
     user_id INT NOT NULL,
     title VARCHAR(255) NOT NULL,
     description TEXT,
-    due_date DATE,
+    due_date TIMESTAMP,
     status VARCHAR(50) CHECK (status IN ('To Do', 'In Progress', 'Done')) NOT NULL DEFAULT 'To Do',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
